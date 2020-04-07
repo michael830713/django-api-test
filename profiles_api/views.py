@@ -79,7 +79,7 @@ class HelloViewSet(viewsets.ViewSet):
 
 class UserProfileViewSet(viewsets.ModelViewSet):
     serializer_class = serializer.UserProfileSerializer
-    queryset = models.UserProfile.objects.all()
+    queryset = models.UserProfile.object.all()
     authentication_classes = (TokenAuthentication,)
     permission_classes = (permissions.UpdateOwnProfile,)
     filter_backends = (filters.SearchFilter,)
